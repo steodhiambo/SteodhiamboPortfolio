@@ -1,0 +1,130 @@
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;   /* Centers content horizontally */
+  align-items: center;       /* Centers content vertically */
+  width: 100%;
+  height: calc(100vh - 100px); /* Full height minus top margin */
+  background-color: #21325e;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 0; /* No padding for the overall section */
+  box-sizing: border-box; /* Prevent padding from affecting width/height */
+}
+
+/* Container for the text and photo */
+.about-content {
+  display: flex;
+  justify-content: center;   /* Center content horizontally */
+  align-items: center;       /* Center content vertically */
+  width: 80%;                 /* Adjust width to fit content */
+  max-width: 1200px;         /* Optional: restricts the content width */
+  gap: 20px;                 /* Space between text and image */
+  padding: 0 20px;           /* Optional: space on the sides */
+  box-sizing: border-box;
+}
+
+/* Paragraph (left side of the photo) */
+.about p {
+  flex: 1;
+  font-size: 20px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Heading (right side of the photo) */
+.about h2 {
+  flex: 1;
+  font-size: 30px;
+  color: #e9d35b;
+  margin-left: 20px;
+  text-align: center;
+}
+
+/* Image styling */
+.about img {
+  width: 150px; /* Adjust the width of the image */
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */
+  margin-left: 60px; /* Add margin to the right of the image */
+}
+
+/* Icon container */
+.prompt {
+  display: flex;
+  justify-content: center;   /* Horizontally centers the icons */
+  gap: 20px;                 /* Space between icons */
+  margin-top: 20px;          /* Adds space above the icons */
+  align-items: center;       /* Vertically center the icons */
+  width: 100%;               /* Ensures the prompt takes full width */
+  box-sizing: border-box;
+}
+
+.prompt svg {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.prompt svg:hover {
+  color: #e9d35b;
+}
+
+.profile-image {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 20%; /* Makes the image circular */
+  margin-bottom: 20px; /* Adds space below the image */
+  object-fit: cover; /* Ensures the image fits nicely */
+}
+
+.skills {
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; /* Adds space between About and Skills section */
+}
+
+.skills h1 {
+  color: #3e497a;
+}
+
+.skills .list {
+  list-style: none;
+  width: 60%;
+}
+
+.list span {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    /* font-size: 40px; */
+    font-size: 24px; /* Decrease the font size for smaller screens */
+    margin-left: 0; /* Remove or reduce margins */
+    text-align: center
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .skills {
+    text-align: center;
+  }
+
+  .list {
+    padding: 0;
+  }
+
+  .skills h2 {
+    font-size: 30px;
+  }
+}
