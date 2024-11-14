@@ -14,8 +14,7 @@ function Home() {
           <div className="text-content">
             <h2>Hello, My Name is Stephen Odhiambo</h2>
             <p>
-              A dedicated software developer, always eager to learn and grow, 
-              constantly exploring new technologies and best practices.
+            I am a passionate software developer, always eager to learn and evolve, consistently exploring cutting-edge technologies and embracing best practices to drive innovation
             </p>
             <div className="prompt">
               <a href="https://www.linkedin.com/in/stephen-odhiambo-411912278" target="_blank" rel="noopener noreferrer">

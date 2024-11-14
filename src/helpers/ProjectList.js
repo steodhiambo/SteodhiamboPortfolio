@@ -1,4 +1,4 @@
-import ATM from "../assets/ATM.png";
+import atm from "../assets/atm.png";
 import Ascii from "../assets/Ascii.png";
 import groupie from "../assets/groupie.png";
 import portfolio from "../assets/portfolio.png";
@@ -6,7 +6,7 @@ import portfolio from "../assets/portfolio.png";
 export const ProjectList = [
   {
     name: "Atm-Management-System",
-    image: ATM,
+    image: atm,
     skills: "C,File Manipulation,Data Structures",
   },
   {
