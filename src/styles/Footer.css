@@ -19,6 +19,14 @@
   cursor: pointer;
 }
 
+.socialMedia a {
+  text-decoration: none;
+}
+
+.socialMedia svg:hover {
+  color: #e9d35b;
+}
+
 .footer p {
   color: white;
 }
