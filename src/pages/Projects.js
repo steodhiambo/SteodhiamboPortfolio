@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectItem from "../components/ProjectItem";
-import { ProjectList } from "../helpers/ProjectList";
-
+import { usePortfolioData } from "../hooks/usePortfolioData";
 import "../styles/Projects.css";
 
 function Projects() {
+  const { data, loading } = usePortfolioData();
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  const { projects } = data;
+
   return (
     <div className="projects">
-      <h1> My Personal Projects</h1>
+      <h1>My Personal Projects</h1>
       <div className="projectList">
-        {ProjectList.map((project, idx) => {
-          return (
-            <ProjectItem id={idx} name={project.name} image={project.image} />
-          );
-        })}
+        {projects.map((project) => (
+          <ProjectItem 
+            key={project.id}
+            id={project.id} 
+            name={project.name} 
+            image={project.image}
+          />
+        ))}
       </div>
     </div>
   );
