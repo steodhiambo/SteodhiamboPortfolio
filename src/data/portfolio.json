@@ -1,0 +1,134 @@
+{
+  "personal": {
+    "name": "Stephen Odhiambo",
+    "title": "Software Developer",
+    "bio": "I am a passionate software developer, always eager to learn and evolve, consistently exploring cutting-edge technologies and embracing best practices to drive innovation",
+    "email": "stephenoginga6@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/stephen-odhiambo-411912278",
+    "github": "https://github.com/steodhiambo",
+    "location": "Kisumu, Kenya",
+    "profileImage": "/assets/profile.JPG"
+  },
+  "skills": {
+    "frontend": ["ReactJS", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Material-UI"],
+    "backend": ["Node.js", "Express.js", "Go", "SQL", "RESTful APIs"],
+    "languages": ["JavaScript", "C", "Go", "SQL"],
+    "tools": ["Git", "npm", "VS Code", "Linux"]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "ATM Management System",
+      "description": "A comprehensive ATM management system built with C, featuring file manipulation and advanced data structures for secure banking operations.",
+      "image": "../assets/atm.png",
+      "technologies": ["C", "File Manipulation", "Data Structures"],
+      "githubUrl": "https://github.com/steodhiambo/atm-system",
+      "liveUrl": "",
+      "features": ["Account Management", "Transaction Processing", "Security Features"],
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "name": "ASCII Art Web",
+      "description": "A web application that converts text into ASCII art with various font styles and customization options.",
+      "image": "../assets/Ascii.png",
+      "technologies": ["HTML", "CSS", "JavaScript", "HTTP Headers"],
+      "githubUrl": "https://github.com/steodhiambo/ascii-art-web",
+      "liveUrl": "",
+      "features": ["Multiple Font Styles", "Real-time Preview", "Export Options"],
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "name": "Groupie Tracker",
+      "description": "A dynamic web application that tracks and displays information about music artists using external APIs.",
+      "image": "../assets/groupie.png",
+      "technologies": ["HTML", "Node.js", "JSON", "REST API"],
+      "githubUrl": "https://github.com/steodhiambo/groupie-tracker",
+      "liveUrl": "",
+      "features": ["Artist Search", "Concert Locations", "Real-time Data"],
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "name": "Portfolio Website",
+      "description": "A responsive portfolio website showcasing my projects and skills, built with modern React practices.",
+      "image": "../assets/portfolio.png",
+      "technologies": ["React", "Node.js", "HTML", "CSS"],
+      "githubUrl": "https://github.com/steodhiambo/portfolio",
+      "liveUrl": "",
+      "features": ["Responsive Design", "Dynamic Content", "Modern UI"],
+      "status": "in-progress"
+    },
+    {
+      "id": 5,
+      "name": "New Project 1",
+      "description": "A new project showcased in this portfolio.",
+      "image": "../assets/screenshot_project_1.png",
+      "technologies": ["To be updated"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "features": ["To be updated"],
+      "status": "in-progress"
+    },
+    {
+      "id": 6,
+      "name": "New Project 2",
+      "description": "A new project showcased in this portfolio.",
+      "image": "../assets/screenshot_project_2.png",
+      "technologies": ["To be updated"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "features": ["To be updated"],
+      "status": "in-progress"
+    },
+    {
+      "id": 7,
+      "name": "New Project 3",
+      "description": "A new project showcased in this portfolio.",
+      "image": "../assets/screenshot_project_3.png",
+      "technologies": ["To be updated"],
+      "githubUrl": "",
+      "liveUrl": "",
+      "features": ["To be updated"],
+      "status": "in-progress"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "type": "education",
+      "title": "Kenya Certificate of Secondary Education",
+      "institution": "Joel Omino High School",
+      "location": "Kenya",
+      "startDate": "2013",
+      "endDate": "2016",
+      "description": "Completed secondary education with focus on sciences and mathematics."
+    },
+    {
+      "id": 2,
+      "type": "education",
+      "title": "Bachelor's Degree",
+      "institution": "University of Kabianga",
+      "location": "Kenya",
+      "startDate": "2017",
+      "endDate": "2021",
+      "description": "Completed undergraduate studies with strong foundation in computer science principles."
+    },
+    {
+      "id": 3,
+      "type": "work",
+      "title": "Apprentice Software Developer",
+      "institution": "Zone01 Kisumu",
+      "location": "Kisumu, Kenya",
+      "startDate": "2024",
+      "endDate": "Present",
+      "description": "Currently building projects by leveraging GoLang's efficiency and scalability to create robust microservices architecture.",
+      "achievements": [
+        "Developed multiple full-stack applications",
+        "Mastered Go programming language",
+        "Implemented microservices architecture"
+      ]
+    }
+  ]
+}
