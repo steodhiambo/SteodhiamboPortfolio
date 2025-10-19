@@ -8,38 +8,23 @@ import screenshot3 from "../assets/screenshot_project_3.png";
 
 export const ProjectList = [
   {
-    name: "Atm-Management-System",
-    image: atm,
-    skills: "C,File Manipulation,Data Structures",
-  },
-  {
-    name: "Ascii-Art- Web",
-    image: Ascii,
-    skills: "HTML,CSS,JavaScript,Http header",
-  },
-  {
-    name: "Groupie-Tracker",
-    image: groupie,
-    skills: "HTML,Node.js,JSON,API,REST API",
-  },
-  {
     name: "Portfolio Website",
     image: portfolio,
     skills: "React,Node.js,HTML,CSS,JavaScript",
   },
   {
-    name: "New Project 1",
+    name: "NetFix - Service Marketplace Platform",
     image: screenshot1,
-    skills: "To be updated",
+    skills: "Django,Python,SQLite,HTML,CSS,JavaScript",
   },
   {
-    name: "New Project 2",
+    name: "Movie Discovery App",
     image: screenshot2,
-    skills: "To be updated",
+    skills: "React,Next.js,TypeScript,Tailwind CSS,TMDB API,OMDB API",
   },
   {
-    name: "New Project 3",
+    name: "Umoja Voices - Community Civic Platform",
     image: screenshot3,
-    skills: "To be updated",
+    skills: "React,TypeScript,Vite,Tailwind CSS,Supabase,PostgreSQL",
   },
 ];
