@@ -1,56 +1,23 @@
 {
   "personal": {
-    "name": "Stephen Odhiambo",
-    "title": "Software Developer",
-    "bio": "I am a passionate software developer, always eager to learn and evolve, consistently exploring cutting-edge technologies and embracing best practices to drive innovation",
+    "name": "Stephen Odhiambo Oginga",
+    "title": "Full Stack Developer",
+    "bio": "Enthusiastic and self-driven software developer with one year of experience building software solutions using Go (Golang) and JavaScript. Skilled in backend development, problem-solving, and collaborating on team projects. Eager to contribute to impactful software development teams while continuing to learn and grow in the field.",
     "email": "stephenoginga6@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/stephen-odhiambo-411912278",
+    "linkedin": "https://www.linkedin.com/in/stephen-oginga",
     "github": "https://github.com/steodhiambo",
     "location": "Kisumu, Kenya",
     "profileImage": "/assets/profile.JPG"
   },
   "skills": {
-    "frontend": ["ReactJS", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Material-UI"],
-    "backend": ["Node.js", "Express.js", "Go", "SQL", "RESTful APIs"],
-    "languages": ["JavaScript", "C", "Go", "SQL"],
-    "tools": ["Git", "npm", "VS Code", "Linux"]
+    "frontend": ["HTML", "CSS", "React"],
+    "backend": ["Go (Golang)", "JavaScript", "REST APIs", "Python"],
+    "languages": ["Go (Golang)", "JavaScript", "C"],
+    "tools": ["Git", "Postman", "Github", ""]
   },
   "projects": [
     {
       "id": 1,
-      "name": "ATM Management System",
-      "description": "A comprehensive ATM management system built with C, featuring file manipulation and advanced data structures for secure banking operations.",
-      "image": "../assets/atm.png",
-      "technologies": ["C", "File Manipulation", "Data Structures"],
-      "githubUrl": "https://github.com/steodhiambo/atm-system",
-      "liveUrl": "",
-      "features": ["Account Management", "Transaction Processing", "Security Features"],
-      "status": "completed"
-    },
-    {
-      "id": 2,
-      "name": "ASCII Art Web",
-      "description": "A web application that converts text into ASCII art with various font styles and customization options.",
-      "image": "../assets/Ascii.png",
-      "technologies": ["HTML", "CSS", "JavaScript", "HTTP Headers"],
-      "githubUrl": "https://github.com/steodhiambo/ascii-art-web",
-      "liveUrl": "",
-      "features": ["Multiple Font Styles", "Real-time Preview", "Export Options"],
-      "status": "completed"
-    },
-    {
-      "id": 3,
-      "name": "Groupie Tracker",
-      "description": "A dynamic web application that tracks and displays information about music artists using external APIs.",
-      "image": "../assets/groupie.png",
-      "technologies": ["HTML", "Node.js", "JSON", "REST API"],
-      "githubUrl": "https://github.com/steodhiambo/groupie-tracker",
-      "liveUrl": "",
-      "features": ["Artist Search", "Concert Locations", "Real-time Data"],
-      "status": "completed"
-    },
-    {
-      "id": 4,
       "name": "Portfolio Website",
       "description": "A responsive portfolio website showcasing my projects and skills, built with modern React practices.",
       "image": "../assets/portfolio.png",
@@ -61,37 +28,37 @@
       "status": "in-progress"
     },
     {
-      "id": 5,
-      "name": "New Project 1",
-      "description": "A new project showcased in this portfolio.",
+      "id": 2,
+      "name": "NetFix - Service Marketplace Platform",
+      "description": "A Django-based web application that connects customers with service providers. It's a marketplace where companies can offer their services and customers can request them.",
       "image": "../assets/screenshot_project_1.png",
-      "technologies": ["To be updated"],
-      "githubUrl": "",
+      "technologies": ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
+      "githubUrl": "https://github.com/steodhiambo/netflix",
       "liveUrl": "",
-      "features": ["To be updated"],
-      "status": "in-progress"
+      "features": ["User Authentication", "Service Management", "Service Requests", "Profile Pages", "Service Categories", "Admin Interface"],
+      "status": "completed"
     },
     {
-      "id": 6,
-      "name": "New Project 2",
-      "description": "A new project showcased in this portfolio.",
+      "id": 3,
+      "name": "Movie Discovery App",
+      "description": "A modern, AI-powered movie discovery platform built with React Next.js, featuring trending content, personalized recommendations, and smart watchlist management.",
       "image": "../assets/screenshot_project_2.png",
-      "technologies": ["To be updated"],
-      "githubUrl": "",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "OMDB API"],
+      "githubUrl": "https://github.com/steodhiambo/movie-discovery-app",
       "liveUrl": "",
-      "features": ["To be updated"],
-      "status": "in-progress"
+      "features": ["Trending Dashboard", "Advanced Search", "Smart Watchlist", "AI Recommendations", "Multi-Source Ratings", "Responsive Design"],
+      "status": "completed"
     },
     {
-      "id": 7,
-      "name": "New Project 3",
-      "description": "A new project showcased in this portfolio.",
+      "id": 4,
+      "name": "Umoja Voices - Community Civic Platform",
+      "description": "A comprehensive civic engagement platform empowering Kenyan communities through issue reporting, community discussions, and transparent governance.",
       "image": "../assets/screenshot_project_3.png",
-      "technologies": ["To be updated"],
-      "githubUrl": "",
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
+      "githubUrl": "https://github.com/steodhiambo/umoja-voices",
       "liveUrl": "",
-      "features": ["To be updated"],
-      "status": "in-progress"
+      "features": ["Issue Reporting", "Community Engagement", "Representative Directory", "Civic Education", "Multilingual Support", "Progressive Web App"],
+      "status": "completed"
     }
   ],
   "experience": [
@@ -121,14 +88,25 @@
       "title": "Apprentice Software Developer",
       "institution": "Zone01 Kisumu",
       "location": "Kisumu, Kenya",
-      "startDate": "2024",
-      "endDate": "Present",
-      "description": "Currently building projects by leveraging GoLang's efficiency and scalability to create robust microservices architecture.",
+      "startDate": "March 2024",
+      "endDate": "March 2025",
+      "description": "Developing software solutions using Go (Golang) and JavaScript, collaborating on team projects to build innovative applications.",
       "achievements": [
-        "Developed multiple full-stack applications",
-        "Mastered Go programming language",
-        "Implemented microservices architecture"
+        "Develop a high-performance file indexing system for Berijjam, processing 1GB of text data in just 18 seconds using SimHash-based fingerprinting and in-memory indexing",
+        "Collaborate with a team of 5 developers to build TujiFund App, an innovative platform for Chamas, supporting automated contributions, real-time updates, and financial insights reducing manual errors by 60%",
+        "Design and implement a robust database schema, leveraging efficient SQL queries to handle 1000+ posts and comments with minimal latency",
+        "Design and implement a feature-rich ATM Management System in C, supporting secure user registration, real-time transactions, and multi-user access"
       ]
+    },
+    {
+      "id": 4,
+      "type": "certification",
+      "title": "Jobberman Soft Skills Training Certification",
+      "institution": "Jobberman",
+      "location": "Online",
+      "startDate": "2024",
+      "endDate": "2024",
+      "description": "Completed comprehensive soft skills training program focusing on professional development and workplace effectiveness."
     }
   ]
 }
