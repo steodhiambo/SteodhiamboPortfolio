@@ -5,16 +5,16 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import portfolio from "../assets/portfolio.png";
-import screenshot1 from "../assets/screenshot_project_1.png";
-import screenshot2 from "../assets/screenshot_project_2.png";
-import screenshot3 from "../assets/screenshot_project_3.png";
+import netfixProject from "../assets/netfix-project.png";
+import movieDiscoveryApp from "../assets/movie-discovery-app.png";
+import umojaVoicesProject from "../assets/umoja-voices-project.png";
 import "../styles/ProjectDisplay.css";
 
 const imageMap = {
   "../assets/portfolio.png": portfolio,
-  "../assets/screenshot_project_1.png": screenshot1,
-  "../assets/screenshot_project_2.png": screenshot2,
-  "../assets/screenshot_project_3.png": screenshot3
+  "../assets/netfix-project.png": netfixProject,
+  "../assets/movie-discovery-app.png": movieDiscoveryApp,
+  "../assets/umoja-voices-project.png": umojaVoicesProject
 };
 
 function ProjectDisplay() {

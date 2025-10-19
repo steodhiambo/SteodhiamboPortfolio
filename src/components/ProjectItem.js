@@ -4,18 +4,18 @@ import atm from "../assets/atm.png";
 import Ascii from "../assets/Ascii.png";
 import groupie from "../assets/groupie.png";
 import portfolio from "../assets/portfolio.png";
-import screenshot1 from "../assets/screenshot_project_1.png";
-import screenshot2 from "../assets/screenshot_project_2.png";
-import screenshot3 from "../assets/screenshot_project_3.png";
+import netfixProject from "../assets/netfix-project.png";
+import movieDiscoveryApp from "../assets/movie-discovery-app.png";
+import umojaVoicesProject from "../assets/umoja-voices-project.png";
 
 const imageMap = {
   "../assets/atm.png": atm,
   "../assets/Ascii.png": Ascii,
   "../assets/groupie.png": groupie,
   "../assets/portfolio.png": portfolio,
-  "../assets/screenshot_project_1.png": screenshot1,
-  "../assets/screenshot_project_2.png": screenshot2,
-  "../assets/screenshot_project_3.png": screenshot3
+  "../assets/netfix-project.png": netfixProject,
+  "../assets/movie-discovery-app.png": movieDiscoveryApp,
+  "../assets/umoja-voices-project.png": umojaVoicesProject
 };
 
 function ProjectItem({ image, name, id }) {
