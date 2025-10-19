@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { usePortfolioData } from "../hooks/usePortfolioData";
 
 function Experience() {
@@ -26,10 +27,10 @@ function Experience() {
             className={`vertical-timeline-element--${item.type}`}
             date={`${item.startDate} - ${item.endDate}`}
             iconStyle={{ 
-              background: item.type === 'work' ? "#e9d35b" : "#3e497a", 
+              background: item.type === 'work' ? "#e9d35b" : item.type === 'certification' ? "#4caf50" : "#3e497a", 
               color: "#fff" 
             }}
-            icon={item.type === 'work' ? <WorkIcon /> : <SchoolIcon />}
+            icon={item.type === 'work' ? <WorkIcon /> : item.type === 'certification' ? <EmojiEventsIcon /> : <SchoolIcon />}
           >
             <h3 className="vertical-timeline-element-title">
               {item.title}
