@@ -4,17 +4,17 @@ import { usePortfolioData } from "../hooks/usePortfolioData";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import atm from "../assets/atm.png";
-import Ascii from "../assets/Ascii.png";
-import groupie from "../assets/groupie.png";
 import portfolio from "../assets/portfolio.png";
+import screenshot1 from "../assets/screenshot_project_1.png";
+import screenshot2 from "../assets/screenshot_project_2.png";
+import screenshot3 from "../assets/screenshot_project_3.png";
 import "../styles/ProjectDisplay.css";
 
 const imageMap = {
-  "../assets/atm.png": atm,
-  "../assets/Ascii.png": Ascii,
-  "../assets/groupie.png": groupie,
-  "../assets/portfolio.png": portfolio
+  "../assets/portfolio.png": portfolio,
+  "../assets/screenshot_project_1.png": screenshot1,
+  "../assets/screenshot_project_2.png": screenshot2,
+  "../assets/screenshot_project_3.png": screenshot3
 };
 
 function ProjectDisplay() {
