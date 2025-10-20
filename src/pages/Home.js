@@ -3,27 +3,34 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GithubIcon from "@mui/icons-material/GitHub";
 import "../styles/Home.css";
-import profile from "../assets/profile.JPG";  // Import your image here
+import profile from "../assets/profile.JPG";
+import { usePortfolioData } from "../hooks/usePortfolioData";
 
 function Home() {
+  const { data, loading } = usePortfolioData();
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  const { personal, skills } = data;
+
   return (
     <div className="home">
       <div className="about">
         <div className="about-content">
-          <img src={profile} alt="Stephen Odhiambo" className="profile-image" />
+          <img src={profile} alt={personal.name} className="profile-image" />
           <div className="text-content">
-            <h2>Hello, My Name is Stephen Odhiambo</h2>
-            <p>
-            I am a passionate software developer, always eager to learn and evolve, consistently exploring cutting-edge technologies and embracing best practices to drive innovation
-            </p>
+            <h2>Hello, My Name is {personal.name}</h2>
+            <p>{personal.bio}</p>
             <div className="prompt">
-              <a href="https://www.linkedin.com/in/stephen-odhiambo-411912278" target="_blank" rel="noopener noreferrer">
+              <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
               </a>
-              <a href="mailto:stephenoginga6@gmail.com">
+              <a href={`mailto:${personal.email}`}>
                 <EmailIcon />
               </a>
-              <a href="https://github.com/steodhiambo" target="_blank" rel="noopener noreferrer">
+              <a href={personal.github} target="_blank" rel="noopener noreferrer">
                 <GithubIcon />
               </a>
             </div>
@@ -35,15 +42,19 @@ function Home() {
         <ol className="list">
           <li className="item">
             <h2>Front-End</h2>
-            <span>ReactJS, HTML, CSS, NPM, Bootstrap</span>
+            <span>{skills.frontend.join(", ")}</span>
           </li>
           <li className="item">
             <h2>Back-End</h2>
-            <span>NodeJS, ExpressJS, SQL</span>
+            <span>{skills.backend.join(", ")}</span>
           </li>
           <li className="item">
             <h2>Languages</h2>
-            <span>JavaScript, C, Go</span>
+            <span>{skills.languages.join(", ")}</span>
+          </li>
+          <li className="item">
+            <h2>Tools</h2>
+            <span>{skills.tools.join(", ")}</span>
           </li>
         </ol>
       </div>

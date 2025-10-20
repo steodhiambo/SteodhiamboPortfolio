@@ -5,12 +5,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 40px 20px;
 }
-.projects .projectTitle {
+
+.projects h1 {
   text-align: center;
   color: #3e497a;
   font-size: 60px;
   font-weight: bolder;
+  margin-bottom: 50px;
 }
 
 .projectList {
@@ -19,9 +23,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  gap: 0;
 }
-
-/* MENU ITEM STYLING */
 
 .projectItem {
   border-radius: 15px;
@@ -30,11 +33,14 @@
   margin: 40px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  background: white;
 }
+
 .projectItem:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .projectItem .bgImage {
@@ -49,6 +55,9 @@
 
 .projectItem h1 {
   font-size: 25px;
+  color: #3e497a;
+  margin: 20px 0 10px 0;
+  padding: 0 15px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -60,15 +69,32 @@
 @media only screen and (max-width: 800px) {
   .projectList {
     grid-template-columns: 1fr;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .projectList {
     width: 100%;
   }
+  
   .projectItem {
     width: 300px;
     height: 300px;
+    margin: 20px;
+  }
+  
+  .projects h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projectItem {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+  }
+
+  .projectItem h1 {
+    font-size: 20px;
+  }
+
+  .projectItem .bgImage {
+    height: 150px;
   }
 }

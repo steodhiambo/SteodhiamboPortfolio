@@ -1,28 +1,242 @@
 .project {
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3e497a;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 30px;
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-link:hover {
+  background: rgba(62, 73, 122, 0.1);
+}
+
+.project {
+  position: relative;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-header h1 {
+  color: #3e497a;
+  font-size: 48px;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.status-badge {
+  position: fixed;
+  top: 120px;
+  right: 30px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.status-badge.completed {
+  background: #e9d35b;
+  color: #333;
+}
+
+.status-badge.in-progress {
+  background: #21325e;
+  color: white;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-description h3,
+.project-technologies h3,
+.project-features h3 {
+  color: #3e497a;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-description p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-item {
+  background: #21325e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-features li {
+  color: #666;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 20px;
+}
+
+.project-features li:before {
+  content: "✓";
+  color: #e9d35b;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link.github {
+  background: #21325e;
+  color: white;
+}
+
+.project-link.github:hover {
+  background: #3e497a;
+}
+
+.project-link.live {
+  background: #e9d35b;
+  color: #333;
+}
+
+.project-link.live:hover {
+  background: #d4c049;
+}
+
+.project-not-found {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 50vh;
+  font-size: 24px;
+  color: #666;
 }
 
-.project h1 {
-  margin-top: 50px;
-  color: #3e497a;
-  font-size: 35px;
-}
-.project img {
-  width: 700px;
-  border-radius: 10px;
-}
-
-.project p {
-  font-size: 40px;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 18px;
   color: #3e497a;
 }
 
-.project svg {
-  font-size: 60px;
-  color: #3e497a;
+.loading::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: 2px solid #3e497a;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 768px) {
+  .project-header {
+    margin-bottom: 30px;
+  }
+  
+  .project-header h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .status-badge {
+    position: static;
+    margin-top: 10px;
+  }
+  
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .project-links {
+    justify-content: center;
+  }
+  
+  .project-link {
+    flex: 1;
+    justify-content: center;
+    min-width: 140px;
+  }
 }

@@ -1,0 +1,112 @@
+{
+  "personal": {
+    "name": "Stephen Odhiambo Oginga",
+    "title": "Full Stack Developer",
+    "bio": "Enthusiastic and self-driven software developer with one year of experience building software solutions using Go (Golang) and JavaScript. Skilled in backend development, problem-solving, and collaborating on team projects. Eager to contribute to impactful software development teams while continuing to learn and grow in the field.",
+    "email": "stephenoginga6@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/stephen-oginga",
+    "github": "https://github.com/steodhiambo",
+    "location": "Kisumu, Kenya",
+    "profileImage": "/assets/profile.JPG"
+  },
+  "skills": {
+    "frontend": ["HTML", "CSS", "React"],
+    "backend": ["Go (Golang)", "JavaScript", "REST APIs", "Python"],
+    "languages": ["Go (Golang)", "JavaScript", "C"],
+    "tools": ["Git", "Postman", "Github", ""]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Portfolio Website",
+      "description": "A responsive portfolio website showcasing my projects and skills, built with modern React practices.",
+      "image": "../assets/portfolio.png",
+      "technologies": ["React", "Node.js", "HTML", "CSS"],
+      "githubUrl": "https://github.com/steodhiambo/portfolio",
+      "liveUrl": "",
+      "features": ["Responsive Design", "Dynamic Content", "Modern UI"],
+      "status": "in-progress"
+    },
+    {
+      "id": 2,
+      "name": "NetFix - Service Marketplace Platform",
+      "description": "A Django-based web application that connects customers with service providers. It's a marketplace where companies can offer their services and customers can request them.",
+      "image": "../assets/netfix-project.png",
+      "technologies": ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
+      "githubUrl": "https://github.com/steodhiambo/netflix",
+      "liveUrl": "",
+      "features": ["User Authentication", "Service Management", "Service Requests", "Profile Pages", "Service Categories", "Admin Interface"],
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "name": "Movie Discovery App",
+      "description": "A modern, AI-powered movie discovery platform built with React Next.js, featuring trending content, personalized recommendations, and smart watchlist management.",
+      "image": "../assets/movie-discovery-app.png",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "OMDB API"],
+      "githubUrl": "https://github.com/steodhiambo/movie-discovery-app",
+      "liveUrl": "",
+      "features": ["Trending Dashboard", "Advanced Search", "Smart Watchlist", "AI Recommendations", "Multi-Source Ratings", "Responsive Design"],
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "name": "Umoja Voices - Community Civic Platform",
+      "description": "A comprehensive civic engagement platform empowering Kenyan communities through issue reporting, community discussions, and transparent governance.",
+      "image": "../assets/umoja-voices-project.png",
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
+      "githubUrl": "https://github.com/steodhiambo/umoja-voices",
+      "liveUrl": "",
+      "features": ["Issue Reporting", "Community Engagement", "Representative Directory", "Civic Education", "Multilingual Support", "Progressive Web App"],
+      "status": "completed"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "type": "education",
+      "title": "Kenya Certificate of Secondary Education",
+      "institution": "Joel Omino High School",
+      "location": "Kenya",
+      "startDate": "2013",
+      "endDate": "2016",
+      "description": "Completed secondary education with focus on sciences and mathematics."
+    },
+    {
+      "id": 2,
+      "type": "education",
+      "title": "Bachelor's Degree",
+      "institution": "University of Kabianga",
+      "location": "Kenya",
+      "startDate": "2017",
+      "endDate": "2021",
+      "description": "Completed undergraduate studies with strong foundation in computer science principles."
+    },
+    {
+      "id": 3,
+      "type": "work",
+      "title": "Apprentice Software Developer",
+      "institution": "Zone01 Kisumu",
+      "location": "Kisumu, Kenya",
+      "startDate": "March 2024",
+      "endDate": "March 2025",
+      "description": "Developing software solutions using Go (Golang) and JavaScript, collaborating on team projects to build innovative applications.",
+      "achievements": [
+        "Develop a high-performance file indexing system for Berijjam, processing 1GB of text data in just 18 seconds using SimHash-based fingerprinting and in-memory indexing",
+        "Collaborate with a team of 5 developers to build TujiFund App, an innovative platform for Chamas, supporting automated contributions, real-time updates, and financial insights reducing manual errors by 60%",
+        "Design and implement a robust database schema, leveraging efficient SQL queries to handle 1000+ posts and comments with minimal latency",
+        "Design and implement a feature-rich ATM Management System in C, supporting secure user registration, real-time transactions, and multi-user access"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "certification",
+      "title": "Jobberman Soft Skills Training Certification",
+      "institution": "Jobberman",
+      "location": "Online",
+      "startDate": "2024",
+      "endDate": "2024",
+      "description": "Completed comprehensive soft skills training program focusing on professional development and workplace effectiveness."
+    }
+  ]
+}
