@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectItem from "../components/ProjectItem";
 import { usePortfolioData } from "../hooks/usePortfolioData";
 import "../styles/Projects.css";
