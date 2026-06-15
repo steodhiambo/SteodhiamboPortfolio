@@ -1,82 +1,159 @@
-/* About Section */
 .about {
   display: flex;
-  justify-content: center;   /* Centers content horizontally */
-  align-items: center;       /* Centers content vertically */
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: calc(100vh - 100px); /* Full height minus top margin */
-  background-color: #21325e;
+  height: calc(100vh - 100px);
+  background-color: var(--nav-bg, #21325e);
   color: #f0f0f0;
-  text-align: center;
-  padding: 0; /* No padding for the overall section */
-  box-sizing: border-box; /* Prevent padding from affecting width/height */
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Container for the text and photo */
 .about-content {
   display: flex;
-  justify-content: center;   /* Center content horizontally */
-  align-items: center;       /* Center content vertically */
-  width: 80%;                 /* Adjust width to fit content */
-  max-width: 1200px;         /* Optional: restricts the content width */
-  gap: 20px;                 /* Space between text and image */
-  padding: 0 20px;           /* Optional: space on the sides */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  gap: 50px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
-/* Paragraph (left side of the photo) */
-.about p {
-  flex: 1;
-  font-size: 20px;
-  margin-right: 20px;
-  text-align: center;
-  line-height: 1.5;
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
-/* Heading (right side of the photo) */
-.about h2 {
+.text-content {
   flex: 1;
-  font-size: 30px;
+  text-align: left;
+}
+
+.text-content h2 {
+  font-size: 36px;
   color: #e9d35b;
-  margin-left: 20px;
-  text-align: center;
+  margin: 0 0 10px 0;
+  text-align: left;
 }
 
-/* Image styling */
-.about img {
-  width: 150px; /* Adjust the width of the image */
-  height: auto;
-  border-radius: 50%; /* Makes the image circular */
-  margin-left: 60px; /* Add margin to the right of the image */
+.tagline {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #e9d35b;
+  font-style: italic;
+  margin: 0 0 14px 0;
+  text-align: left;
+  opacity: 0.9;
 }
 
-/* Icon container */
+.bio {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  text-align: left;
+  color: #f0f0f0;
+}
+
 .prompt {
   display: flex;
-  justify-content: center;   /* Horizontally centers the icons */
-  gap: 20px;                 /* Space between icons */
-  margin-top: 20px;          /* Adds space above the icons */
-  align-items: center;       /* Vertically center the icons */
-  width: 100%;               /* Ensures the prompt takes full width */
-  box-sizing: border-box;
+  gap: 20px;
+  align-items: center;
 }
 
 .prompt svg {
   font-size: 40px;
   color: white;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .prompt svg:hover {
   color: #e9d35b;
 }
 
-.profile-image {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  border-radius: 20%; /* Makes the image circular */
-  margin-bottom: 20px; /* Adds space below the image */
-  object-fit: cover; /* Ensures the image fits nicely */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e9d35b;
+  color: #21325e;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.resume-btn svg {
+  font-size: 24px;
+  color: #21325e;
+}
+
+.resume-btn:hover {
+  background: #d4c049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 211, 91, 0.4);
+}
+
+.metrics {
+  width: 100%;
+  padding: 40px 20px;
+  background: var(--bg-secondary, #fff);
+  display: flex;
+  justify-content: center;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 16px;
+  border-radius: 12px;
+  background: var(--bg-primary, #f0f0f0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.metric-icon {
+  color: #e9d35b;
+  font-size: 32px;
+  display: flex;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary, #333);
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: var(--text-secondary, #666);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .skills {
@@ -86,11 +163,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px; /* Adds space between About and Skills section */
+  padding: 60px 20px;
+  background: var(--bg-primary, #f0f0f0);
 }
 
 .skills h1 {
-  color: #3e497a;
+  color: var(--text-primary, #3e497a);
 }
 
 .skills .list {
@@ -100,56 +178,91 @@
 
 .list span {
   font-size: 20px;
+  color: var(--text-secondary, #666);
 }
 
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  font-size: 18px;
-  color: #3e497a;
+.list h2 {
+  color: var(--text-primary, #333);
+  font-size: 28px;
 }
 
-.loading::after {
-  content: '';
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  border: 2px solid #3e497a;
-  border-top: 2px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
+@media only screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .text-content h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .tagline,
+  .bio {
+    text-align: center;
+  }
+
+  .prompt {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .metric-card {
+    padding: 16px 12px;
+  }
+
+  .metric-value {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .about h2 {
-    /* font-size: 40px; */
-    font-size: 24px; /* Decrease the font size for smaller screens */
-    margin-left: 0; /* Remove or reduce margins */
-    text-align: center
+  .about {
+    height: auto;
+    padding: 60px 0;
   }
 
-  .about .prompt {
-    margin-top: 10px;
-    font-size: 20px;
-    width: 80%;
+  .profile-image {
+    width: 160px;
+    height: 160px;
   }
 
-  .skills {
-    text-align: center;
+  .text-content h2 {
+    font-size: 22px;
+  }
+
+  .about-content {
+    width: 90%;
+  }
+
+  .skills h2 {
+    font-size: 30px;
   }
 
   .list {
     padding: 0;
   }
 
-  .skills h2 {
-    font-size: 30px;
+  .skills {
+    text-align: center;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

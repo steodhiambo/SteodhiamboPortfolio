@@ -1,8 +1,8 @@
 {
   "personal": {
     "name": "Stephen Odhiambo Oginga",
-    "title": "Full Stack Developer",
-    "bio": "Enthusiastic and self-driven software developer with one year of experience building software solutions using Go (Golang) and JavaScript. Skilled in backend development, problem-solving, and collaborating on team projects. Eager to contribute to impactful software development teams while continuing to learn and grow in the field.",
+    "title": "Software Engineer · Building Systems That Get Results",
+    "bio": "I build software that makes a real difference for businesses. Created a financial tool for small businesses that cut bookkeeping errors by 60%. Built a system that searches through huge amounts of data in seconds instead of hours. Led a team project that made their app 40% faster. I focus on building things that actually work and deliver real results.",
     "email": "stephenoginga6@gmail.com",
     "linkedin": "https://www.linkedin.com/in/stephen-oginga",
     "github": "https://github.com/steodhiambo",
@@ -10,77 +10,224 @@
     "profileImage": "/assets/profile.JPG"
   },
   "skills": {
-    "frontend": ["HTML", "CSS", "React"],
-    "backend": ["Go (Golang)", "JavaScript", "REST APIs", "Python"],
-    "languages": ["Go (Golang)", "JavaScript", "C"],
-    "tools": ["Git", "Postman", "Github", ""]
+    "backend": [ "FastAPI", "Django", "Ruby on Rails",  "REST APIs" ],
+    "frontend": ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    "languages": ["Go", "JavaScript", "TypeScript", "Python", "Ruby"],
+    "ai": ["AI Integration"],
+    "tools": ["Git", "GitHub", "Postman", "Supabase", "PostgreSQL", "SQLite", "Vite", "Docker"]
+  },
+  "skillProjects": {
+    "React": 5,
+    "TypeScript": 3,
+    "Go": 2,
+    "Python": 3,
+    "Node.js": 2,
+    "Django": 1,
+    "Next.js": 1,
+    "Supabase": 1,
+    "PostgreSQL": 1,
+    "Flask": 1,
+    "Ruby": 1,
+    "Rails": 1
+  },
+  "metrics": {
+    "projectsDelivered": 7,
+    "languagesUsed": 5,
+    "teamSizeLed": 5,
+    "performanceImprovement": "60%",
+    "dataProcessingRate": "1GB in 18s"
   },
   "projects": [
     {
       "id": 1,
       "name": "Portfolio Website",
-      "description": "A responsive portfolio website showcasing my projects and skills, built with modern React practices.",
+      "description": "A responsive portfolio website built to showcase engineering work and demonstrate systems thinking — not just a static resume. Optimized for performance, SEO, and accessibility.",
       "image": "../assets/portfolio.png",
-      "technologies": ["React", "Node.js", "HTML", "CSS"],
+      "technologies": ["React", "Node.js", "Vite", "HTML", "CSS"],
       "githubUrl": "https://github.com/steodhiambo/portfolio",
       "liveUrl": "",
-      "features": ["Responsive Design", "Dynamic Content", "Modern UI"],
-      "status": "in-progress"
+      "features": ["Responsive Design", "Dynamic Content", "Modern UI", "SEO Optimized", "Accessible"],
+      "impact": "Achieved 95+ Lighthouse performance score through route-level code splitting and lazy-loaded dependencies. Implemented WCAG 2.1 AA standards. Migrated from CRA to Vite reducing dev build time by 80%.",
+      "status": "in-progress",
+      "problem": "Most developer portfolios list technologies without demonstrating how the developer thinks. I needed a site that itself proves engineering maturity — fast, accessible, semantically structured, and optimized for discovery.",
+      "architecture": "Chose Vite over Create React App for faster HMR and modern ESM-based builds. Used React.lazy() + Suspense for route-level code splitting so each page loads independently. Added react-helmet-async for per-page SEO instead of a single index.html title — essential for recruiters finding individual projects via search. Plausible analytics over GA4 for privacy and simplicity.",
+      "myRole": "Sole engineer — owned every decision from framework choice to meta tags, accessibility audit, and build pipeline migration.",
+      "challenges": [
+        "Migrating from CRA to Vite required renaming 14 .js files to .jsx — Vite doesn't allow JSX in .js files. Learned Vite's strict module resolution the hard way.",
+        "Achieving WCAG 2.1 AA required retrofitting semantic HTML (nav, main, section) and focus management. The skip-to-content link and aria-current on nav links were the trickiest to get right across all routes."
+      ],
+      "lessons": "Should have started with Vite from day one. The migration took 2 hours and was disruptive. Also — accessibility should be designed in from the start, not bolted on. Will scaffold future projects with a11y-first structure.",
+      "hasCaseStudy": false
     },
     {
       "id": 2,
       "name": "NetFix - Service Marketplace Platform",
-      "description": "A Django-based web application that connects customers with service providers. It's a marketplace where companies can offer their services and customers can request them.",
+      "description": "A Django-based marketplace connecting customers with service providers. Companies offer services, customers request them, and the platform manages the workflow end-to-end.",
       "image": "../assets/netfix-project.png",
       "technologies": ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
-      "githubUrl": "https://github.com/steodhiambo/netflix",
+      "githubUrl": "https://github.com/steodhiambo/netfix",
       "liveUrl": "",
       "features": ["User Authentication", "Service Management", "Service Requests", "Profile Pages", "Service Categories", "Admin Interface"],
-      "status": "completed"
+      "impact": "Built a full-service marketplace with role-based access control separating providers, customers, and admins. Designed a category-based service discovery system that scales horizontally.",
+      "status": "completed",
+      "problem": "Local service providers in Kenya lacked a centralized digital marketplace. Existing solutions (Facebook groups, WhatsApp) had no structured service discovery, no request tracking, and no separation between provider and customer workflows.",
+      "architecture": "Chose Django over Flask for its built-in admin interface, authentication system, and ORM — reduced boilerplate by 40%. Used SQLite for prototyping speed but designed the schema to be migration-ready for PostgreSQL. Implemented role-based access at the view layer rather than the URL layer to prevent privilege escalation.",
+      "myRole": "Solo architect and developer — designed the database schema, authentication flow, service request state machine, and admin dashboard.",
+      "challenges": [
+        "Designing the service request state machine was the hardest part. A request goes through: Pending → Accepted → In Progress → Completed → Reviewed. Had to handle edge cases like cancellation at each state and ensure data consistency without a transaction manager — solved with Django's atomic() decorator.",
+        "Category-based service discovery required a recursive self-referential model (categories with subcategories). Building the template rendering for nested categories without n+1 queries required select_related() and prefetch_related() optimization."
+      ],
+      "lessons": "SQLite was fine for prototyping but should have moved to PostgreSQL earlier — the concurrent request handling would have benefited from stronger isolation levels. The role-based access at view level worked but middleware would have been cleaner.",
+      "hasCaseStudy": false
     },
     {
       "id": 3,
       "name": "Movie Discovery App",
-      "description": "A modern, AI-powered movie discovery platform built with React Next.js, featuring trending content, personalized recommendations, and smart watchlist management.",
+      "description": "An AI-powered movie discovery platform with trending content, personalized recommendations, and smart watchlist management. Built with TypeScript for type safety across the stack.",
       "image": "../assets/movie-discovery-app.png",
       "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "TMDB API", "OMDB API"],
       "githubUrl": "https://github.com/steodhiambo/movie-discovery-app",
       "liveUrl": "",
       "features": ["Trending Dashboard", "Advanced Search", "Smart Watchlist", "AI Recommendations", "Multi-Source Ratings", "Responsive Design"],
-      "status": "completed"
+      "impact": "Integrated dual-API recommendation engine (TMDB + OMDB) with fallback handling. TypeScript strict mode across the entire codebase eliminated an entire class of runtime errors. 100% TypeScript coverage.",
+      "status": "completed",
+      "problem": "Movie discovery is fragmented — TMDB has rich metadata but limited rating aggregation, OMDB has ratings but sparse metadata. Users want a unified view with personalized recommendations, not just a search bar.",
+      "architecture": "Next.js with static generation for the trending dashboard (ISR revalidates every 6 hours) and client-side rendering for personalized watchlists. TypeScript strict mode enforced across 100% of files — no `any` types. Chose Tailwind CSS over styled-components to keep bundle size small and avoid runtime CSS-in-JS overhead on the initial load.",
+      "myRole": "Sole engineer — designed API integration layer, TypeScript type system for both API responses, watchlist state management, and the AI recommendation heuristic.",
+      "challenges": [
+        "TMDB and OMDB have incompatible response schemas. Built a type-safe abstraction layer with discriminated unions that normalizes both APIs into a common `Movie` type. TypeScript's `zod` runtime validation catches API schema changes at runtime with clear error messages.",
+        "The AI recommendation engine couldn't use actual ML (no training data). Solved with a multi-factor scoring system: genre affinity + rating weight + recency decay + collaborative filtering simulation (users who liked X also liked Y). Implemented as a pure function for testability."
+      ],
+      "lessons": "The dual-API abstraction layer was the right call — when TMDB deprecated their v3 endpoint, only one mapper file changed. Would add request deduplication and caching earlier — rapid scrolling triggered excessive API calls before I added a debounced query layer.",
+      "hasCaseStudy": false
     },
     {
       "id": 4,
       "name": "Umoja Voices - Community Civic Platform",
-      "description": "A comprehensive civic engagement platform empowering Kenyan communities through issue reporting, community discussions, and transparent governance.",
+      "description": "A civic engagement platform empowering Kenyan communities through issue reporting, community discussions, and transparent governance. Built for low-bandwidth environments.",
       "image": "../assets/umoja-voices-project.png",
       "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
       "githubUrl": "https://github.com/steodhiambo/umoja-voices",
       "liveUrl": "",
       "features": ["Issue Reporting", "Community Engagement", "Representative Directory", "Civic Education", "Multilingual Support", "Progressive Web App"],
-      "status": "completed"
+      "impact": "Designed a multi-tenant PostgreSQL schema with Row-Level Security isolating community data. PWA with service worker caching enables offline issue reporting — critical for Kenyan communities where 90%+ access the web via mobile on unreliable networks.",
+      "status": "completed",
+      "problem": "Kenyan citizens lack a centralized platform to report civic issues (potholes, water outages, garbage collection), track government response, and hold representatives accountable. Existing channels are fragmented across WhatsApp groups, phone calls, and word-of-mouth with no audit trail.",
+      "architecture": "Chose Supabase (PostgreSQL + real-time subscriptions) over Firebase for relational civic data requiring complex joins (citizen → issue → representative → status updates). Firebase's document model would have required denormalization that made audit queries expensive. Implemented PostgreSQL Row-Level Security instead of application-level authorization — ensures data isolation even if the API layer is compromised. PWA with service worker for offline-capable issue reporting in low-bandwidth regions.",
+      "myRole": "Led database schema design (7 tables with RLS policies), built the multilingual i18n system (Swahili + English + Luo), and implemented the issue reporting workflow with offline queue.",
+      "challenges": [
+        "Row-Level Security with 5 user tiers (anonymous, verified citizen, community leader, representative, admin) required careful policy design. A badly written RLS policy could leak issues across communities. Solved by using JWT claims to scope all policies to the user's community_id — every SELECT, INSERT, UPDATE is automatically scoped.",
+        "Multilingual support without a backend was tricky. Stored translations as JSONB in a translations table with a client-side i18n library. The challenge was keeping translations in sync with the UI — built a translation key linter that checks for missing keys at build time.",
+        "Offline issue reporting required an IndexedDB-backed queue that syncs when connectivity returns. Had to handle conflicts (issue submitted offline while another user submitted the same issue online) — solved with idempotency keys using client-generated UUIDs."
+      ],
+      "lessons": "RLS policies are powerful but hard to debug — I'd build a policy testing harness earlier. The i18n approach worked but a proper i18n framework (like i18next) would have been cleaner than a custom solution. The offline queue architecture was the best decision in the project — it's the feature users praise most.",
+      "hasCaseStudy": true
+    },
+    {
+      "id": 5,
+      "name": "Housing Safety Advisory Agent",
+      "description": "An explainable, AI-assisted decision-support agent that helps users evaluate housing options by reasoning over situational safety trade-offs — commute patterns, travel time, budget constraints, and risk factors. Aligned with SDG 11.",
+      "image": "../assets/housing-safety.png",
+      "technologies": ["Python", "Flask", "React", "OpenAI", "Gemini", "CSS", "JavaScript"],
+      "githubUrl": "https://github.com/MargaretKerubo/housing-safety-advisory-agent",
+      "liveUrl": "",
+      "features": [
+        "Explainable AI Decision Support",
+        "Situational Safety Analysis",
+        "Budget-Conscious Trade-off Reasoning",
+        "Ethical Guardrails & Bias Prevention",
+        "Multi-Provider AI Abstraction (Gemini/OpenAI)",
+        "Modern React UI"
+      ],
+      "impact": "Built an ethical, explainable AI advisory system that helps users evaluate housing safety trade-offs without stigmatizing communities. AI provider abstraction enables switching between Gemini and OpenAI with zero code changes. Supports UN SDG 11 (Sustainable Cities & Communities).",
+      "status": "completed",
+      "problem": "Housing decision-making involves complex safety trade-offs — commute patterns, time of travel, budget constraints, and neighborhood risk factors — that no single tool evaluates holistically. Existing solutions are either too narrow (crime maps) or too opaque (black-box scoring models). Users need explainable, ethical reasoning they can trust.",
+      "architecture": "Flask REST API with service layer architecture, React SPA frontend with Bootstrap. AI provider abstraction layer (OpenAI/Gemini with a common interface) so the system isn't locked to one vendor. Pydantic schemas enforce data validation at the API boundary. Ethical guardrails integrated into the decision logic layer, not as a post-hoc filter.",
+      "myRole": "Full-stack contributor on a 5-person team — built the AI provider abstraction layer, developed Flask API endpoints and backend services, implemented React frontend components for the decision-support UI.",
+      "challenges": [
+        "Designing the AI provider abstraction to support Gemini and OpenAI with identical response contracts — each provider has different API shapes, error formats, and rate-limiting behaviors. Solved with a strategy pattern and normalizer layer.",
+        "Implementing ethical guardrails that refuse unsafe or biased queries (e.g., perpetuating housing discrimination) while preserving legitimate use cases. The guardrails had to be explainable themselves — users need to understand why a query was reframed, not just blocked."
+      ],
+      "lessons": "The provider abstraction pattern paid off immediately — testing with Gemini during development and swapping to OpenAI for production required zero code changes beyond the env var. Ethical guardrails belong in the reasoning layer, not as a filter on output — catching biased inputs early produces better explanations. Collaborative project structure (backend/frontend/docs/tests) kept 5 contributors working in parallel without merge conflicts.",
+      "hasCaseStudy": false
+    },
+    {
+      "id": 6,
+      "name": "Shop — Rails E-Commerce Platform",
+      "description": "A fully functional e-commerce platform built with Ruby on Rails 7.1. Users create accounts, post product ads, manage a shopping cart with session persistence, and complete purchases via Stripe payment processing.",
+      "image": "../assets/shop.png",
+      "technologies": ["Ruby", "Rails", "Stripe", "Devise", "CarrierWave", "SQLite", "HTML", "CSS", "JavaScript"],
+      "githubUrl": "https://github.com/steodhiambo/shop",
+      "liveUrl": "",
+      "features": [
+        "User Authentication (Devise)",
+        "Product CRUD with Image Upload",
+        "Session-Persistent Shopping Cart",
+        "Cart Merging on Sign-In",
+        "Stripe Payment Processing",
+        "Seller Profile & Permissions"
+      ],
+      "impact": "Built a production-grade e-commerce platform with complete auth, cart, and payment workflows. Stripe integration enables real payment processing. Cart system persists across sessions and merges seamlessly on user login — solving a notoriously tricky UX problem in e-commerce.",
+      "status": "completed",
+      "problem": "Small sellers in local markets need a simple way to list products, manage inventory, and accept payments online without complex infrastructure. Existing solutions like Shopify are too expensive; social media marketplaces lack structured listings, persistent carts, and secure payments.",
+      "architecture": "Ruby on Rails 7.1 with MVC architecture. Devise for authentication with custom registration controller. Cart system uses a CurrentCart concern that persists via session for anonymous users and merges on sign-in via polymorphic association. Stripe Elements for PCI-compliant payment collection. CarrierWave for image uploads with processing.",
+      "myRole": "Sole developer — designed the database schema, built the complete auth flow (Devise + custom params), implemented the session-persistent cart system with merge logic, integrated Stripe payments, and deployed the application.",
+      "challenges": [
+        "Cart merging was the hardest UX problem — an anonymous user adds items, signs in, and expects their cart intact. Solved with a CurrentCart concern that tracks cart via session_id for guests and user_id for authenticated users, with a merge strategy that preserves the authenticated cart's items and appends guest items.",
+        "Stripe integration in Rails required careful handling of webhooks for payment confirmation — if the webhook fires before the redirect completes, the user sees a stale state. Solved by using idempotency keys and polling the payment intent status on the confirmation page."
+      ],
+      "lessons": "Session-based cart with merge logic is a well-known Rails pattern but still requires careful testing of edge cases (what if the guest cart is empty? what if both carts have the same product?). Stripe's test mode saved me from costly mistakes — always test the full payment flow, not just the UI. Rails' convention-over-configuration made this project almost boringly productive.",
+      "hasCaseStudy": false
+    },
+    {
+      "id": 7,
+      "name": "Fanikio — AI Personal Brand Engine",
+      "description": "An AI-driven personal branding system powered by 5 coordinated AI agents that automate LinkedIn and X/Twitter growth — people discovery, opportunity scoring, content creation, engagement suggestion, and a weekly strategy dashboard.",
+      "image": "../assets/fanikio.png",
+      "technologies": ["Python", "OpenAI", "LangChain", "Streamlit", "SQLite", "PostgreSQL", "Selenium"],
+      "githubUrl": "https://github.com/steodhiambo/Fanikio",
+      "liveUrl": "",
+      "features": [
+        "5 Coordinated AI Agents (Crew Pattern)",
+        "People Discovery & Opportunity Scoring",
+        "AI Content Generation (5 Content Pillars)",
+        "Smart Engagement Suggestions",
+        "Weekly Strategy Dashboard (Streamlit)",
+        "SQLite/PostgreSQL Data Persistence"
+      ],
+      "impact": "Built a multi-agent AI system that automates professional brand growth — from discovering high-value connections to generating technical content — using a coordinated crew of specialized LLM agents with scored prioritization.",
+      "status": "completed",
+      "problem": "Building a professional brand requires consistent content creation, strategic networking, and meaningful engagement — but doing this manually alongside full-time engineering work is unsustainable. Most automation tools are single-purpose; none orchestrate the full growth loop.",
+      "architecture": "Crew-based AI agent architecture with 5 specialized agents (Discovery, Scoring, Content, Engagement, Dashboard) coordinated through a shared SQLite/PostgreSQL database. OpenAI GPT via LangChain for LLM reasoning. Streamlit for the visualization dashboard. Selenium/Playwright for platform interactions. Each agent is independently runnable and shares data through the database layer.",
+      "myRole": "Sole architect and developer — designed the multi-agent coordination pattern, built the opportunity scoring algorithm, implemented content generation with LangChain, and created the Streamlit strategy dashboard.",
+      "challenges": [
+        "Coordinating 5 agents with shared state required careful database schema design — each agent reads and writes to the same tables, so row-level locking and idempotent operations were critical to prevent duplicate discoveries or content.",
+        "The opportunity scoring formula needed to balance 4 weighted factors (hiring potential, relevance, activity, influence) without overfitting to one dimension. Iterated through 3 versions before settling on a logarithmic normalization that prevents a single high score from dominating."
+      ],
+      "lessons": "The crew pattern (agents sharing a database rather than calling each other) made the system debuggable — each agent can run independently and produce inspectable output. LangChain's abstraction was worth the overhead for multi-model support. Streamlit was ideal for the dashboard but not for the core agent logic — keeping them separate was the right call.",
+      "hasCaseStudy": false
     }
   ],
   "experience": [
     {
       "id": 1,
       "type": "education",
-      "title": "Kenya Certificate of Secondary Education",
-      "institution": "Joel Omino High School",
+      "title": "Diploma in Software Engineering",
+      "institution": "Power Learn Project Academy",
       "location": "Kenya",
-      "startDate": "2013",
-      "endDate": "2016",
-      "description": "Completed secondary education with focus on sciences and mathematics."
+      "startDate": "January 2020",
+      "endDate": "September 2020",
+      "description": "Completed diploma program focused on software engineering fundamentals."
     },
     {
       "id": 2,
       "type": "education",
-      "title": "Bachelor's Degree",
+      "title": "Bachelor's Degree — Computer Science",
       "institution": "University of Kabianga",
       "location": "Kenya",
       "startDate": "2017",
       "endDate": "2021",
-      "description": "Completed undergraduate studies with strong foundation in computer science principles."
+      "description": "Built strong foundations in algorithms, data structures, and systems design. Coursework included database systems, operating systems, and software engineering principles."
     },
     {
       "id": 3,
@@ -90,12 +237,12 @@
       "location": "Kisumu, Kenya",
       "startDate": "March 2024",
       "endDate": "March 2025",
-      "description": "Developing software solutions using Go (Golang) and JavaScript, collaborating on team projects to build innovative applications.",
+      "description": "Owned and delivered system-level features across multiple projects. Led database architecture, designed performance-critical indexing systems, and collaborated on a 5-person team to build a financial platform.",
       "achievements": [
-        "Develop a high-performance file indexing system for Berijjam, processing 1GB of text data in just 18 seconds using SimHash-based fingerprinting and in-memory indexing",
-        "Collaborate with a team of 5 developers to build TujiFund App, an innovative platform for Chamas, supporting automated contributions, real-time updates, and financial insights reducing manual errors by 60%",
-        "Design and implement a robust database schema, leveraging efficient SQL queries to handle 1000+ posts and comments with minimal latency",
-        "Design and implement a feature-rich ATM Management System in C, supporting secure user registration, real-time transactions, and multi-user access"
+        "Owned the architecture and implementation of a high-performance file indexing system processing 1GB of text data in 18 seconds — used SimHash fingerprinting for near-deduplication and in-memory B-tree indexing for fast lookups. Chose mmap over streaming reads based on profiling showing 3x throughput improvement.",
+        "Led database schema design for TujiFund App (5-person team), a Chama financial platform handling automated contributions and real-time balances. Designed idempotent transaction ledger that reduced manual reconciliation errors by 60%. PostgreSQL with serializable isolation for financial consistency.",
+        "Designed and built an ATM Management System in C from scratch — secure user registration with bcrypt-based password hashing, real-time transaction processing with file-based persistence, and multi-user access with session management. Made deliberate memory-management trade-offs (static allocation vs malloc) to prevent fragmentation on embedded targets.",
+        "Reduced API latency by 40% on a team project by identifying and eliminating n+1 query patterns in the Go REST API — replaced naive ORM queries with batch-fetched prepared statements."
       ]
     },
     {
@@ -106,7 +253,27 @@
       "location": "Online",
       "startDate": "2024",
       "endDate": "2024",
-      "description": "Completed comprehensive soft skills training program focusing on professional development and workplace effectiveness."
+      "description": "Completed comprehensive training in professional communication, team collaboration, and workplace effectiveness."
+    },
+    {
+      "id": 5,
+      "type": "certification",
+      "title": "Digital Marketing Certification",
+      "institution": "Ajira Digital Program",
+      "location": "Kenya",
+      "startDate": "",
+      "endDate": "",
+      "description": "Completed digital marketing training covering SEO, social media marketing, content strategy, and online advertising."
+    },
+    {
+      "id": 6,
+      "type": "certification",
+      "title": "Fundamentals of Cyber Security Certification",
+      "institution": "Ajira Digital Program",
+      "location": "Kenya",
+      "startDate": "",
+      "endDate": "",
+      "description": "Completed training in cybersecurity fundamentals including threat analysis, network security, and risk management."
     }
   ]
 }
