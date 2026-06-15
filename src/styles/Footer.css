@@ -1,15 +1,14 @@
-
-
 .footer {
   width: 100%;
   height: 200px;
-  background: #21325e;
+  background: var(--nav-bg, #21325e);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-top: 10px;
   margin-top: 200px;
+  transition: background 0.3s ease;
 }
 
 .socialMedia svg {
