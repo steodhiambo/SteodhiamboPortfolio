@@ -6,29 +6,24 @@ import "../styles/Footer.css";
 import { usePortfolioData } from "../hooks/usePortfolioData";
 
 function Footer() {
-  const { data, loading } = usePortfolioData();
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
+  const { data } = usePortfolioData();
   const { personal } = data;
 
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="socialMedia">
-        <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">
+        <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <LinkedInIcon />
         </a>
-        <a href={`mailto:${personal.email}`}>
+        <a href={`mailto:${personal.email}`} aria-label="Send email">
           <EmailIcon />
         </a>
-        <a href={personal.github} target="_blank" rel="noopener noreferrer">
+        <a href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <GithubIcon />
         </a>
       </div>
-      <p> &copy; 2024 steodhiambo.com</p>
-    </div>
+      <p> &copy; {new Date().getFullYear()} steodhiambo.com</p>
+    </footer>
   );
 }
 
