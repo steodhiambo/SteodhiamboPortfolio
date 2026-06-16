@@ -7,8 +7,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import CodeIcon from "@mui/icons-material/Code";
 import StorageIcon from "@mui/icons-material/Storage";
 import "../styles/Home.css";
-import profileWebp from "../assets/profile.webp";
-import profile from "../assets/profile.JPG";
+import profile from "../assets/profile.webp";
 import SEO from "../components/SEO";
 import { usePortfolioData } from "../hooks/usePortfolioData";
 
@@ -63,10 +62,7 @@ function Home() {
       />
       <section className="about" aria-label="About me">
         <div className="about-content">
-          <picture>
-            <source srcSet={profileWebp} type="image/webp" />
-            <img src={profile} alt={personal.name} className="profile-image" loading="lazy" width="280" height="280" decoding="async" />
-          </picture>
+          <img src={profile} alt={personal.name} className="profile-image" loading="lazy" width="280" height="280" decoding="async" />
           <div className="text-content">
             <h2 data-aos="fade-right">
               {personal.name}
